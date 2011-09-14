@@ -15,3 +15,8 @@ rescue LoadError
 end
 
 task :default
+
+task :push do
+  # heroku apps:create seattlerailsbridge
+  system "git push heroku master"
+end
