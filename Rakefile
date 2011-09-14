@@ -14,9 +14,13 @@ rescue LoadError
   # ignore - for heroku
 end
 
-task :default
+task :default => :push
 
 task :push do
   # heroku apps:create seattlerailsbridge
   system "git push heroku master"
+end
+
+task :logs do
+  system "heroku logs"
 end
