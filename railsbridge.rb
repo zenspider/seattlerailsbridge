@@ -39,7 +39,7 @@ class RailsBridge < Sinatra::Base
   get '/:id' do
     n = params[:id].to_i
     lesson = load_lesson n
-    erb :page, :locals => lesson
+    erb(:page, :locals => lesson).gsub(/<pre>/, '<pre class="term">')
   end
 
   get '/' do
