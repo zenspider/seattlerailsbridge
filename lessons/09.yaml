@@ -24,35 +24,37 @@ goal: |
   brand-spankin'-new (empty) rails app.
 
 goal_title: Creating Your New Application
-explanation: "\n\
-  * 'mkdir' stands for make directory (folder).\n\
-  ** We've made a folder called railsbridge\n\
-  * 'cd' stands for change directory.\n\
-  ** 'cd railsbridge' makes railsbridge our current directory.\n\
-  * 'rails new' creates a new rails project with the name you give.\n\
-  ** In this case we told it to create a new project called suggestotron.\n\
-  ** We'll go into detail on what it created shortly.\n\
-  * 'ls' stands for \"list (stuff)\".\n\
-  ** It shows you the contents of the current folder.\n\n\
-  You can see that <code>rails new</code> created a lot directors and\n\
-  files. The ones we want to focus on today are:\n\n\
-  {| border=\"1\" cellspacing=\"0\" cellpadding=\"3\" align=\"center\"\n\
-  ! File/Folder\n\
-  ! Purpose\n\
-  |-\n\
-  | app/\n\
-  | Contains the controllers, models, and views for your application.  You will do most of your work here.\n\
-  |-\n\
-  | config/\n\
-  | Configure your application\xE2\x80\x99s runtime rules, routes, database, and more.\n\
-  |-\n\
-  | db/\n\
-  | Shows your current database schema, as well as the database migrations.\n\
-  |-\n\
-  | public/\n\
-  | The only folder seen to the world as-is.  This is where your images, JavaScript,  stylesheets (CSS), and other static files go\n\
-  |-\n\
-  |}\n\n\
-  There is a lot more that `rails new` created. Probably enough to fill\n\
-  a book, so we're going to ignore them for now.\n"
+explanation: |
+  * 'mkdir' stands for make directory (folder).
+    * We've made a folder called railsbridge
+  * 'cd' stands for change directory.
+    * 'cd railsbridge' makes railsbridge our current directory.
+  * 'rails new' creates a new rails project with the name you give.
+    * In this case we told it to create a new project called suggestotron.
+    * We'll go into detail on what it created shortly.
+  * 'ls' stands for "list (stuff)".
+    * It shows you the contents of the current folder.
+
+  You can see that <code>rails new</code> created a lot directors and
+  files. The ones we want to focus on today are:\n
+  {| border="1" cellspacing="0" cellpadding="3" align="center"
+  ! File/Folder
+  ! Purpose
+  |-
+  | app/
+  | Contains the controllers, models, and views for your application.  You will do most of your work here.
+  |-
+  | config/
+  | Configure your application\xE2\x80\x99s runtime rules, routes, database, and more.
+  |-
+  | db/
+  | Shows your current database schema, as well as the database migrations.
+  |-
+  | public/
+  | The only folder seen to the world as-is.  This is where your images, JavaScript,  stylesheets (CSS), and other static files go
+  |-
+  |}
+
+  There is a lot more that `rails new` created. Probably enough to fill
+  a book, so we're going to ignore them for now.
 section_title: Getting Started
