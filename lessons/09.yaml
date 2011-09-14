@@ -36,24 +36,30 @@ explanation: |
     * It shows you the contents of the current folder.
 
   You can see that <code>rails new</code> created a lot directors and
-  files. The ones we want to focus on today are:\n
-  {| border="1" cellspacing="0" cellpadding="3" align="center"
-  ! File/Folder
-  ! Purpose
-  |-
-  | app/
-  | Contains the controllers, models, and views for your application.  You will do most of your work here.
-  |-
-  | config/
-  | Configure your application\xE2\x80\x99s runtime rules, routes, database, and more.
-  |-
-  | db/
-  | Shows your current database schema, as well as the database migrations.
-  |-
-  | public/
-  | The only folder seen to the world as-is.  This is where your images, JavaScript,  stylesheets (CSS), and other static files go
-  |-
-  |}
+  files. The ones we want to focus on today are:
+
+  <table border="1" cellspacing="0" cellpadding="3" align="center">
+    <tr>
+    <th> File/Folder
+    </th><th> Purpose
+    </th></tr>
+    <tr>
+    <td> app/
+    </td><td> Contains the controllers, models, and views for your application.  You will do most of your work here.
+    </td></tr>
+    <tr>
+    <td> config/
+    </td><td> Configure your application’s runtime rules, routes, database, and more.
+    </td></tr>
+    <tr>
+    <td> db/
+    </td><td> Shows your current database schema, as well as the database migrations.
+    </td></tr>
+    <tr>
+    <td> public/
+    </td><td> The only folder seen to the world as-is.  This is where your images, JavaScript,  stylesheets (CSS), and other static files go
+    </td></tr>
+  </table>
 
   There is a lot more that `rails new` created. Probably enough to fill
   a book, so we're going to ignore them for now.
