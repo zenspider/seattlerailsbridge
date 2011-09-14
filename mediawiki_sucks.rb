@@ -73,52 +73,12 @@ goals.each_with_index do |goal, i|
     end
   end
 
-  warn "no worky: #{i}" unless goal.has_key? "goal_title"
-
   i += 1
   path = "lessons/%02d.yaml" % i
   File.open path, "w" do |f|
     YAML.dump goal, f
   end
 end
-
-# sections = DATA.read.split(/^(== .+)/)
-# sections.shift if sections.first.empty?
-#
-# sections.each_slice(2).each_with_index do |(title, body), i|
-#   puts
-#   puts "title = #{title}"
-#
-#   # TODO: prefix section titles with the proper key
-#   # TODO: fix step parsing so the step title is captured
-#   # TODO: add markdown or something
-#   # TODO: add proper level # handling instead of this tripe
-#
-#   i += 1
-#   subsections = body.strip.split(/^(=+ .+)/).map(&:strip)
-#   subsections.shift if subsections.first.empty?
-#
-#   keys = %w[steps section_content goal explanation
-#             step_content step_title section_title]
-#   lesson = Hash[keys.map { |k| [k, nil] }]
-#
-#   key_map = {
-#     "what just happened?" => "explanation"
-#   }
-#
-#   subsections.each_slice(2) do |(subtitle, content)|
-#     key = subtitle.strip_heading.downcase
-#     key = key_map[key] || key
-#     key = key.gsub(/\W/, '_')
-# p key
-#     lesson[key] = content
-#   end
-#
-#   path = "lessons/%02d.yaml" % i
-#   File.open path, "w" do |f|
-#     YAML.dump lesson, f
-#   end
-# end
 
 __END__
 == Meta ==
@@ -314,8 +274,6 @@ All of these methods are available for any string. You can then use
 
 === Creating Your New Application ===
 
-FIX ME
-
 ==== Goal ====
 
 Let's get started. By the end of this step, we'll have a
@@ -458,8 +416,6 @@ and boom! Your changes are live!
 
 === Running Your Application Locally ===
 
-FIX ME
-
 ==== Goal ====
 
 Let's fire up the application locally
@@ -522,7 +478,7 @@ rails generate scaffold topic title:string description:text
 
 # TODO: no... we need to show all the files created and say what they mean
 
-=== Explaining MVC and Records ===
+===== Explaining MVC and Records =====
 
 [[File:Mvc.jpg]]
 

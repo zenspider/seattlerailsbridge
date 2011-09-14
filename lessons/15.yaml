@@ -9,6 +9,9 @@ steps: |
   rake db:migrate
   rails server
   </pre>
+  
+  
+  * TODO: have them look at the generated files
 
 section_content: ""
 goal: |
@@ -21,6 +24,15 @@ goal: |
   following:
   
   * Create a database table for topics with a title and a description
+  
+  
+  In this step we'll learn a bit about MVC (Model-View-Controller) architecture.
+  By the end of this step you should understand the following concepts:
+  
+  * A record
+  * Model
+  * View
+  * Controller
 
 goal_title: Creating a migration
 explanation: |
@@ -36,5 +48,35 @@ explanation: |
   * <code>rake db:migrate</code> tells rails to update the database to include a table for our new model
   
   # TODO: no... we need to show all the files created and say what they mean
+  
+  ===== Explaining MVC and Records =====
+  
+  [[File:Mvc.jpg]]
+  
+  TODO: fix fuzzy ugly diagram
+  
+  
+  Rails implements a very specific notion of the
+  '''Model-View-Controller''' pattern, which guides how you build a web
+  application.
+  
+  '''Model'''
+  
+  * represents what is in the database
+  * ActiveRecord, ActiveModel
+  * TODO: clarify
+  
+  '''View'''
+  
+  * the model rendered as HTML
+  * ActionView, erb
+  * TODO: clarify
+  
+  '''Controller'''
+  
+  * receives HTTP actions (GET, POST, PUT, DELETE)
+  * decides what to do, such as rendering a view
+  * ActionController
+  * TODO: clarify
 
 section_title: Topics

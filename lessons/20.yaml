@@ -1,28 +1,7 @@
 --- 
-steps: |
-  
-  * In a terminal window type the following
-  
-  <pre>
-  rails generate resource vote topic_id:integer
-  rake db:migrate
-  </pre>
-
-section_content: |
-  
-  TODO diagram
-
-goal: |
-  
-  
-  * Create another database table to track votes
-
-goal_title: Creating a model for votes
-explanation: |
-  
-  * Just like before, we're creating a new model named "vote"
-  * The only thing really different is the integer we added called topic_id.
-  ** topic_id is the data we need to draw the line between votes and topics.
-  * We didn't generate a full scaffold this time because we aren't going to do the full CRUD for votes, they're just going to be considered part of topics as-is.
-
-section_title: Voting on Topics
+steps: 
+section_content: 
+goal: 
+goal_title: 
+explanation: 
+section_title: 

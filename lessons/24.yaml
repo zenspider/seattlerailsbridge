@@ -1,26 +1,86 @@
 --- 
 steps: |
   
-  In your handy-dandy terminal, try:
+  * open config/routes.rb
+  * Near the end of the file but before the final end add <code>root :to => 'topics#index'</code>.  When you are done the last few lines should look like this:
   
   <pre>
-  % git add .
-  % git commit -m "Added votes"
-  % git push heroku master
-  % heroku rake db:migrate
+    # This is a legacy wild controller route that's not recommended for RESTful applications.
+    # Note: This route will make all actions in every controller accessible via GET requests.
+    # match ':controller(/:action(/:id(.:format)))'
+  
+    root :to => 'topics#index'
+  end
   </pre>
+  
+  * You also need to remove the welcome aboard page for the new route to work.  Type this in a terminal window:
+  
+  <pre>
+  git rm public/index.html
+  </pre>
+  
+  * Go back to [http://localhost:3000/ http://localhost:3000/].  You should be taken to the topics list automatically.
 
-section_content: 
+section_content: ""
 goal: |
   
   
-  We just made some awesome changes. Let's push them so our friends can
-  play with it.
+  Currently when you go to http://localhost:3000 you see the "Welcome aboard" message.
+  
+  It would be easier to use our app if http://localhost:3000 went directly to the topics list.
+  
+  In this step we'll make that happen and learn a bit about routes in rails.
 
-goal_title: Commit and push to heroku
+goal_title: Setting the default page
 explanation: |
   
-  Again with the pushing and the remote migration... By this time it
-  should be fairly old hat.
+  * root :to => 'topics#index' is a rails route that says the default address for your site is topics#index.  topics#index is the topics list page (the topics controller with the index action).
+  
+  * Rails routes control how URLs (web addresses) get matched with code on the server.   Similar to how addresses match with houses and apartments.
+  * The file config/routes.rb is like an address directory listing the possible addresses and which code goes with each one
+  * routes.rb uses some shortcuts so it doesn't always show all the possible URLs.  To explore the URLs in more detail  we can use the terminal.
+  
+  * At the terminal type <pre> rake routes</pre> you should get something that looks like this:
+  <pre>
+       votes GET    /votes(.:format)           {:action=>"index", :controller=>"votes"}
+             POST   /votes(.:format)           {:action=>"create", :controller=>"votes"}
+    new_vote GET    /votes/new(.:format)       {:action=>"new", :controller=>"votes"}
+   edit_vote GET    /votes/:id/edit(.:format)  {:action=>"edit", :controller=>"votes"}
+        vote GET    /votes/:id(.:format)       {:action=>"show", :controller=>"votes"}
+             PUT    /votes/:id(.:format)       {:action=>"update", :controller=>"votes"}
+             DELETE /votes/:id(.:format)       {:action=>"destroy", :controller=>"votes"}
+      topics GET    /topics(.:format)          {:action=>"index", :controller=>"topics"}
+             POST   /topics(.:format)          {:action=>"create", :controller=>"topics"}
+   new_topic GET    /topics/new(.:format)      {:action=>"new", :controller=>"topics"}
+  edit_topic GET    /topics/:id/edit(.:format) {:action=>"edit", :controller=>"topics"}
+       topic GET    /topics/:id(.:format)      {:action=>"show", :controller=>"topics"}
+             PUT    /topics/:id(.:format)      {:action=>"update", :controller=>"topics"}
+             DELETE /topics/:id(.:format)      {:action=>"destroy", :controller=>"topics"}
+        root        /                          {:action=>"index", :controller=>"topics"}
+  </pre>
+  
+  * This shows all the URLs your application responds to.
+  * The code that starts with colons are variables so :id means the id number of the record.
+  * The code in parenthesis is optional
+  
+  TODO: diagram the routes
+  
+  ===== Exploring Routes (optional) =====
+  
+  Open up your rails console:
+  
+  <pre>
+    rails console
+  </pre>
+  
+  Now you can have a look at the paths that are available in your app.
+  Let's try looking at one of the topics routes we just generated.
+  
+  <pre>
+   app.topics_path
+   => "/topics"
+   app.topics_url
+   => "http://www.example.com/topics"
+  </pre>
 
-section_title: 
+section_title: Flow
