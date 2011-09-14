@@ -1,0 +1,30 @@
+--- 
+steps: |
+  
+  * In your terminal, try this:
+  
+  <code>
+    bundle
+    rails server
+  </code>
+  
+  Then point your web browser to [http://localhost:3000 http://localhost:3000].
+  
+  See your web app actually there!
+
+section_content: 
+goal: |
+  
+  FIX ME
+  
+  
+  Let's fire up the application locally
+
+goal_title: Running Your Application Locally
+explanation: |
+  
+  * "bundle" installs software your application needs and prepares it to run.
+  * "rails server" ran your application locally just like heroku is running it on their servers.
+  * This provides a very simple means to see your changes before you commit and push them to heroku.
+
+section_title: 

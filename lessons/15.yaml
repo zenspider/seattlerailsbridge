@@ -1,0 +1,40 @@
+--- 
+steps: |
+  
+  * Open up a terminal window to the suggestotron folder (or use one you already have setup)
+  * Type the following:
+  
+  <pre>
+  rails generate scaffold topic title:string description:text
+  rake db:migrate
+  rails server
+  </pre>
+
+section_content: ""
+goal: |
+  
+  TODO: diagram of topics model
+  
+  
+  The suggestotron has a list of topics that people can vote on. We'll
+  store our topics in the database. In this step you'll do the
+  following:
+  
+  * Create a database table for topics with a title and a description
+
+goal_title: Creating a migration
+explanation: |
+  
+  <code>
+  rails generate scaffold topic title:string description:text
+  </code>
+  
+  * <code>generate scaffold</code> tells rails to create everything necessary to get up and running with topics
+  * <code>topic</code> tells rails the name of the new model
+  * <code>title:string</code> says that topics have a title, which is a string.
+  * <code>description:text</code> says that topics have a description which is a "text". We're befuddled by the difference too.
+  * <code>rake db:migrate</code> tells rails to update the database to include a table for our new model
+  
+  # TODO: no... we need to show all the files created and say what they mean
+
+section_title: Topics

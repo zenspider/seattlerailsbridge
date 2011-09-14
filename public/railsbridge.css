@@ -1,0 +1,10 @@
+div.top-goal { border: 1px solid black; padding: 1em; margin-bottom: 1em }
+div.goal  { background: #fcc; padding: 1em; }
+div.steps { background: #ffc; padding: 1em; }
+div.what   { background: #cfc; padding: 1em; }
+pre.term { background: black; color: #0f0; margin: 1em; padding: 1em }
+pre.code { background: white; color: black; margin: 1em; padding: 1em; border: 1px solid black }
+h2 { font-size: 3.0em; padding: 0; margin: 0 }
+h3 { font-size: 2.0em; padding: 0; margin: 0 0 0.5em 0 }
+h4 { font-size: 1.5em; padding: 0; margin: 0 }
+

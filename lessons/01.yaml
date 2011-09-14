@@ -1,0 +1,18 @@
+--- 
+steps: 
+section_content: ""
+goal: |
+  
+  To teach you Ruby on Rails we are setting up a business case for an online voting system. We have requirements that our system should allow users to
+  * register and login
+  * view the topics sorted by number of votes
+  * vote on topics
+  * create, edit, and destroy topics
+  Also, we have been told the UI should look like this from our business users:
+  [[File:Example.jpg]]
+  
+  Of these requirements, our goal for today is to have a working app online that allows users to manage topics and vote on them. If time allows we can discuss the registration, login, and UI designing aspects of the project.
+
+goal_title: Goal
+explanation: 
+section_title: Meta
