@@ -44,7 +44,8 @@ content: |
   We're going to be working with:
 
   * ruby 1.9.2
-  * rails 3.0.x
+  * rails 3.0.x (**note:** _not_ rails 3.1!)
+  * bundler
   * sqlite
   * the text editor of your choice
 
