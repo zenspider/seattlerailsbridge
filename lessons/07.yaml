@@ -9,7 +9,6 @@ steps: |
   heroku open
   </pre>
 
-section_content: 
 goal: |
   
   
@@ -33,5 +32,3 @@ explanation: |
   # TODO: add my diagram
   
   and boom! Your changes are live!
-
-section_title: 

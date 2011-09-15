@@ -30,7 +30,6 @@ steps: |
   <td><%= link_to topic.title, topic %></td>
   </pre>
 
-section_content: 
 goal: |
   
   
@@ -43,5 +42,3 @@ goal_title: Make the topic title a link
 explanation: |
   
   * TODO
-
-section_title: 

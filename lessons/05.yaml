@@ -7,7 +7,6 @@ steps: |
     git init .
   </pre>
 
-section_content: 
 goal: |
   
   
@@ -23,4 +22,3 @@ explanation: |
   initialized its repository (repo) in a hidden directory called ".git".
   You can see this by typing `ls -a` (list all files).
 
-section_title: 

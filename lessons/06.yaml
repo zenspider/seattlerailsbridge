@@ -10,7 +10,6 @@ steps: |
   git status
   </pre>
 
-section_content: 
 goal: |
   
   
@@ -27,5 +26,3 @@ explanation: |
   * "git commit" tells git to actually _do_ all things you've said you wanted to do.
   ** This is done in two steps so you can group multiple changes together.
   ** '-m "Added all the things"' is just a shortcut to say what your commit message is. You can skip that part and git will bring up an editor to fill out a more detailed message.
-
-section_title: 

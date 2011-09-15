@@ -31,7 +31,6 @@ steps: |
   * Go back to [http://localhost:3000/topics http://localhost:3000/topics] and play.
   * Revel in the fact that you didn't have to restart the server to see these changes. Hawt, no?
 
-section_content: 
 goal: |
   
   
@@ -60,5 +59,3 @@ explanation: |
   * `vote = topic.votes.build` creates a new vote for the current topic.
   * `vote.save!` saves the vote to the database.
   * `redirect_to(topics_path)` tells the browser to go back to topics_path (the topics list).
-
-section_title: 

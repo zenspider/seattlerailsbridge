@@ -19,7 +19,6 @@ steps: |
   end
   </pre>
 
-section_content: 
 goal: |
   
   
@@ -35,5 +34,3 @@ explanation: |
   *** When you ask a topic for its votes, you get an array of votes for that topic.
   ** A vote is for a particular topic, so we put 'belongs_to :topic' in the vote model.
   *** When you ask a vote for its topic, you get the topic for that vote.
-
-section_title: 

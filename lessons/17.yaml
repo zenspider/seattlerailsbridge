@@ -40,7 +40,6 @@ steps: |
   
   * Try it out [http://localhost:3000 http://localhost:3000]
 
-section_content: 
 goal: |
   
   
@@ -58,5 +57,3 @@ explanation: |
   ** format.html means that the server should send html back to the browser
   ** redirect_to topics_path means show the topics list page when we're done creating a topic
   ** :notice => 'Topic was successfully created.' puts the message into the flash so it will be displayed on the topics list
-
-section_title: 

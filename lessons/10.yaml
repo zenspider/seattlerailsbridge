@@ -21,7 +21,6 @@ steps: |
   * Try the 'show', 'edit', and 'destroy' links to see what they do
   * You've created a basic database driven web site, congrats!
 
-section_content: 
 goal: |
   
   
@@ -72,5 +71,3 @@ explanation: |
   * app/controllers/topics_controller.rb
   ** This is the controller file that rails created as part of the scaffold
   ** If you look you'll see a method (a line beginning with <code>def</code>) for each of the views listed above (except _form.html.erb)
-
-section_title: 

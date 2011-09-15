@@ -10,7 +10,6 @@ steps: |
   % heroku rake db:migrate
   </pre>
 
-section_content: 
 goal: |
   
   
@@ -22,5 +21,3 @@ explanation: |
   
   Again with the pushing and the remote migration... By this time it
   should be fairly old hat.
-
-section_title: 
