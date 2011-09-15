@@ -35,11 +35,36 @@ content: |
   over and some you'll go under. It'll all work out by the end of the
   day... unless I really screwed something up. :D
 
+  ### Requirements
+
+  We're going to be working with:
+
+  * ruby 1.9.2
+  * rails 3.0.x
+  * sqlite
+  * the text editor of your choice
+
+  Everything should be set up the night before during our
+  install-fest. Please ensure you have everything working _before_ you
+  show up for railsbridge on Saturday.
+
+  You can verify that you have everything working by trying this out in your terminal:
+
+      % irb
+      >> 1 + 2
+      => 3
+      >> require "active_support"
+      => true
+      >> exit
+      %
+
+  If you can do that, you are probably good to go.
+
   ### Format
 
   Each lesson will look like this:
   
-  <div style="border: 1px solid black; margin: 2em; padding: 1em;">
+  <div style="background: white; border: 1px solid black; margin: 2em; padding: 1em;">
   <h2>Section Title</h2>
   <div class="top-goal">
   section desc
