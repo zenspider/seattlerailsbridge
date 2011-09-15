@@ -1,25 +1,32 @@
 --- 
+goal_title: Allow people to vote
+goal: |
+  
+  Add a button to vote on the topic list page
+
+  TODO: fix me
+
 steps: |
   
-  * Edit app/views/topics/index.html.erb so that the bottom loop looks like this:
+  Edit `app/views/topics/index.html.erb` so that the bottom loop looks like this:
   
-  <pre>
-  <% @topics.each do |topic| %>
-    <tr>
-      <td><%= topic.title %></td>
-      <td><%= topic.description %></td>
-      <td><%= pluralize(topic.votes.length, "vote") %></td>
-      <td><%= link_to '+1', votes_path(:topic_id => topic.id), :method => :post %></td>
-      <td><%= link_to 'Show', topic %></td>
-      <td><%= link_to 'Edit', edit_topic_path(topic) %></td>
-      <td><%= link_to 'Destroy', topic, :confirm => 'Are you sure?', :method => :delete %></td>
-    </tr>
-  <% end %>
+  <pre class="code">
+  &lt;% @topics.each do |topic| %>
+    &lt;tr>
+      &lt;td>&lt;%= topic.title %>&lt;/td>
+      &lt;td>&lt;%= topic.description %>&lt;/td>
+      &lt;td>&lt;%= pluralize(topic.votes.length, "vote") %>&lt;/td>
+      &lt;td>&lt;%= link_to '+1', votes_path(:topic_id => topic.id), :method => :post %>&lt;/td>
+      &lt;td>&lt;%= link_to 'Show', topic %>&lt;/td>
+      &lt;td>&lt;%= link_to 'Edit', edit_topic_path(topic) %>&lt;/td>
+      &lt;td>&lt;%= link_to 'Destroy', topic, :confirm => 'Are you sure?', :method => :delete %>&lt;/td>
+    &lt;/tr>
+  &lt;% end %>
   </pre>
   
-  * Add the following method to Vote in app/controllers/votes_controller.rb:
+  Add the following method to `Vote` in `app/controllers/votes_controller.rb`:
   
-  <pre>
+  <pre class="code">
   def create
     topic = Topic.find(params[:topic_id])
     vote = topic.votes.build
@@ -28,34 +35,28 @@ steps: |
   end
   </pre>
   
-  * Go back to [http://localhost:3000/topics http://localhost:3000/topics] and play.
+  * Go back to [http://localhost:3000/topics](http://localhost:3000/topics) and play.
   * Revel in the fact that you didn't have to restart the server to see these changes. Hawt, no?
 
-goal: |
-  
-  
-  * Add a button to vote on the topic list page
-
-goal_title: Allow people to vote
 explanation: |
   
-  First we added this line to app/views/topics/index.html.erb
+  First we added this line to `app/views/topics/index.html.erb`
   
-  <pre>
-  <td><%= link_to '+1', votes_path(:topic_id => topic.id), :method => :post %></td>
+  <pre class="code">
+  &lt;td>&lt;%= link_to '+1', votes_path(:topic_id => topic.id), :method => :post %>&lt;/td>
   </pre>
   
   * `link_to '+1'` creates an html link with the text '+1'
   * `votes_path(:topic_id => topic.id)` creates the right url for the action we want to invoke. In this case, we want to create a vote for the current topic.
-  ** `votes_path(:topic_id => 42)` would output `/votes?topic_id=42`
+    * `votes_path(:topic_id => 42)` would output `/votes?topic_id=42`
   * `:method => :post` ensures we do the create action of CRUD, not the read action.
   
   The changes we made to votes controller are a bit more complicated so
   let's work through them line by line
   
   * topic = Topic.find(params[:topic_id])
-  ** Finds the topic in the database with that id and stores it in the variable 'topic'.
-  ** params[:topic_id] corresponds to the topic_id part of the votes_path above (eg `?topic_id=42`).
+    * Finds the topic in the database with that id and stores it in the variable 'topic'.
+    * params[:topic_id] corresponds to the topic_id part of the votes_path above (eg `?topic_id=42`).
   * `vote = topic.votes.build` creates a new vote for the current topic.
   * `vote.save!` saves the vote to the database.
   * `redirect_to(topics_path)` tells the browser to go back to topics_path (the topics list).
