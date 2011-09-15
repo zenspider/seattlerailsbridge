@@ -1,0 +1,12 @@
+<h2>Table of Contents</h2>
+
+<ol>
+<% lessons.each_with_index do |lesson, i| %>
+  <% if lesson["section_title"] then %>
+    </ol>
+    <li><a href="/<%= i+1 %>">Section: <%= lesson["section_title"] %></a>
+    <ol>
+  <% end %>
+    <li><a href="/<%= i+1 %>"><%= lesson["goal_title"] %></a>
+<% end %>
+</ol>

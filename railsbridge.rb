@@ -30,23 +30,35 @@ class RailsBridge < Sinatra::Base
 
       r = []
       r << "<a href=\"/#{befor}\">Prev Lesson</a>" if lesson_path befor
-      r << "<a href=\"/\">All Lessons</a>"
+      r << "<a href=\"/toc\">TOC</a>"
       r << "<a href=\"/#{after}\">Next Lesson</a>" if lesson_path after
       r.join " | "
     end
   end
 
+  get '/print' do
+    lessons = Dir["lessons/*.yaml"].sort.map { |f| File.basename f, ".yaml" }
+    lessons.map! { |n| load_lesson n.to_i(10) }
+    erb :index, :locals => { :lessons => lessons, :subtitle => "All Lessons" }
+  end
+
+  get '/toc' do
+    lessons = Dir["lessons/*.yaml"].sort.map { |f| File.basename f, ".yaml" }
+    lessons.map! { |n| load_lesson n.to_i(10) }
+
+    erb :toc, :locals => { :lessons => lessons, :subtitle => "Table of Contents" }
+  end
+
   get '/:id' do
     n = params[:id].to_i
     lesson = load_lesson n
+    lesson["subtitle"] = "Lesson #{n}"
 
     erb(:goal, :locals => lesson).gsub(/<pre>/, '<pre class="term">')
   end
 
   get '/' do
-    lessons = Dir["lessons/*.yaml"].sort.map { |f| File.basename f, ".yaml" }
-    lessons.map! { |n| load_lesson n.to_i(10) }
-    erb :index, :locals => { :lessons => lessons }
+    redirect "/1"
   end
 
   run! if app_file == $0
