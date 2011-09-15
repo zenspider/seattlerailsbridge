@@ -14,11 +14,15 @@ rescue LoadError
   # ignore - for heroku
 end
 
-task :default => :push
+task :default => :sync
+
+task :sync => [:pull, :push]
+
+task :pull do
+  system "git pull --rebase heroku master"
+end
 
 task :push do
-  # heroku apps:create seattlerailsbridge
-  system "git pull --rebase heroku master"
   system "git push heroku master"
 end
 
