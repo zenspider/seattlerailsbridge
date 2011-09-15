@@ -1,0 +1,41 @@
+<%= nav n %>
+
+<% if section_title %>
+  <h2><%= section_title %></h2>
+<% end %>
+
+<div class="top-goal">
+
+<% if section_title %>
+  <%= markdown section_content %>
+<% end %>
+
+<% if goal_title %>
+  <h3><%= goal_title || "wtf" %></h3>
+<% end %>
+
+<% if goal %>
+  <div class="goal">
+  <h4>Goal:</h4>
+  <%= markdown goal || "wtf" %>
+  </div> <!-- goal -->
+<% end %>
+
+<% if steps then %>
+  <div class="steps">
+  <h4>Steps:</h4>
+
+  <%= markdown steps || "wtf" %>
+
+  </div> <!-- steps -->
+<% end %>
+
+<% if explanation then %>
+  <div class="what">
+  <h4>What Just Happened?</h4>
+
+  <%= markdown explanation || "wtf" %>
+  </div> <!-- what -->
+<% end %>
+
+</div> <!-- top-goal -->

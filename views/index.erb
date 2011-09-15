@@ -1,4 +1,4 @@
 <% lessons.each_with_index do |lesson, i| %>
-<a href="/<%= i+1 %>">[direct link to lesson <%= i+1 %>]</a>
-<%= erb :page, :locals => lesson %>
+  <a href="/<%= i+1 %>">[direct link to lesson <%= i+1 %>]</a>
+  <%= erb :goal, :locals => lesson %>
 <% end %>
