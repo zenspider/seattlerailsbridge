@@ -19,15 +19,15 @@ task :default => :sync
 task :sync => [:pull, :push]
 
 task :pull do
-  system "git pull --rebase heroku master"
+  sh "git pull --rebase heroku master"
 end
 
 task :push do
-  system "git push heroku master"
+  sh "git push heroku master"
 end
 
 task :logs do
-  system "heroku logs"
+  sh "heroku logs"
 end
 
 task :renumber do
