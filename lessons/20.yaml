@@ -1,7 +1,16 @@
 --- 
 goal_title: Commit and push to heroku
-goal: |-
+goal: |
   
-  * TODO
-explanation: 
-steps: 
+  Push to heroku, again
+
+steps: |
+
+  Again with the terminal:
+
+      git commit -m "Added topics" .
+      git push heroku master
+
+explanation: |
+  
+  Nothing new here... Except... _**you're done!!!**_ Congratulations, you just "finished" your first rails app! (they're never _really_ ever finished... have fun tweaking it!)
