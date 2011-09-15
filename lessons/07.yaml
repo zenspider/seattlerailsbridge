@@ -1,34 +1,32 @@
 --- 
-steps: |
-  
-  * In your terminal, try:
-  
-  <pre>
-  heroku create
-  git push heroku master
-  heroku open
-  </pre>
-
+goal_title: Deploy to heroku
 goal: |
   
-  
-  OK. We've got an empty app and it has been added to git. What now? '''''Ship it!'''''
+  OK. We've got an empty app and it has been added to git. What now? _**Ship it!**_
 
-goal_title: Deploy to heroku
+steps: |
+  
+  In your terminal, try:
+  
+      heroku create
+      git push heroku master
+      heroku open
+
 explanation: |
   
-  * "heroku create" registers a new application on heroku's system.
-  * "git push" takes all changes you've committed locally and pushes them to heroku.
-  * "heroku open" opens the new application in your browser.
+  * `heroku create` registers a new application on heroku's system.
+  * `git push` takes all changes you've committed locally and pushes them to heroku.
+  * `heroku open` opens the new application in your browser.
   
   While I realize that at this point this isn't all that exciting, the
   point is that it doesn't get more difficult than this as we add more
   functionality to the application. Your typical process will look like:
   
-  # Add/change some functionality.
-  # <code>git commit -m "msg" files</code>
-  # git push heroku master
+  TODO: add my diagram
   
-  # TODO: add my diagram
+  1. Add/change some functionality.
+  2. `git commit -m "msg" files`
+  3. `git push heroku master`
+  4. (wash, rinse, repeat)
   
   and boom! Your changes are live!
