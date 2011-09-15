@@ -4,21 +4,28 @@ content: |
   
   ### Goal
 
-  To teach you Ruby on Rails we are setting up a business case for an online voting system. We have requirements that our system should allow users to
+  To teach you Ruby on Rails we are going to use a "Real World"
+  example. You've decided to create a voting system for you and your
+  friends to play with. You've decided at a minimum, you'd like to
+  allow users to:
 
-  * register and login
   * view the topics sorted by number of votes
   * vote on topics
   * create, edit, and destroy topics
 
-  Also, we have been told the UI should look like this from our business users:
-  [[File:Example.jpg]]
+  You've sketched up an initial screenshot of what you want it to look like:
+
+  TODO: re-grab w/o shadows
+
+  ![screenshot](/images/finished_app.png)
   
-  Of these requirements, our goal for today is to have a working app online that allows users to manage topics and vote on them. If time allows we can discuss the registration, login, and UI designing aspects of the project.
+  Of these requirements, our goal for today is to have a working app
+  online that allows users to manage topics and vote on them.
 
   ### Meta-Goal
 
-  When you have completed today's goal of getting the basic application online you should understand:
+  When you have completed today's goal of getting the basic
+  application online you should understand:
 
   * Basic Ruby syntax
   * How to test your Ruby code (irb)
