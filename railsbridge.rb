@@ -30,6 +30,7 @@ class RailsBridge < Sinatra::Base
       lesson = YAML.load_file lesson_path n
       lesson["n"] = n
       lesson["section_title"] ||= nil
+      lesson["section_content"] ||= ""
       lesson
     end
 
