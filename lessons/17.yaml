@@ -1,10 +1,20 @@
 --- 
+goal_title: Redirect to the topics list after creating a new topic
+goal: |
+  
+  When a user creates a new topic they are currently shown a page with
+  just that topic. For our voting app it makes more sense that they
+  would be taken back to the topic list.
+  
+  In this step we'll change the flow of our app so that the user is
+  taken back to the topics list after they add a new topic.
+
 steps: |
   
-  * Open app/controllers/topics_controller.rb
+  * Open `app/controllers/topics_controller.rb`
   * Look at the create method (it looks like this):
   
-  <pre>
+  <pre class="code">
     def create
       @topic = Topic.new(params[:topic])
   
@@ -20,7 +30,13 @@ steps: |
     end
   </pre>
   
-  * Change the line "format.html { redirect_to topics_path, :notice => 'Topic was successfully created.' }" so that the file looks like this:
+  Change the line:
+
+  <pre class="code">
+  format.html { redirect_to @topic, :notice => 'Topic was successfully created.' }
+  </pre>
+
+  so that the file looks like this:
   
   <pre>
     def create
@@ -40,20 +56,9 @@ steps: |
   
   * Try it out [http://localhost:3000 http://localhost:3000]
 
-goal: |
-  
-  
-  When a user creates a new topic they are currently shown a page with
-  just that topic. For our voting app it makes more sense that they
-  would be taken back to the topic list.
-  
-  In this step we'll change the flow of our app so that the user is
-  taken back to the topics list after they add a new topic.
-
-goal_title: Redirect to the topics list after creating a new topic
 explanation: |
   
-  * <pre> format.html { redirect_to topics_path, :notice => 'Topic was successfully created.' }</pre>
-  ** format.html means that the server should send html back to the browser
-  ** redirect_to topics_path means show the topics list page when we're done creating a topic
-  ** :notice => 'Topic was successfully created.' puts the message into the flash so it will be displayed on the topics list
+  * `format.html { redirect_to topics_path, :notice => 'Topic was successfully created.' }`:
+    * `format.html` means that the server should send html back to the browser
+    * `redirect_to topics_path` means show the topics list page when we're done creating a topic
+    * `:notice => 'Topic was successfully created.'` puts the message into the flash so it will be displayed on the topics list
