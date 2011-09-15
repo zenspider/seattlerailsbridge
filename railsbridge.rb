@@ -12,6 +12,14 @@ require 'sinatra/base'
 
 class RailsBridge < Sinatra::Base
   helpers do
+    def page locals
+      if locals["content"] then
+        erb(:page, :locals => locals).gsub(/<pre>/, '<pre class="term">')
+      else
+        erb(:goal, :locals => locals).gsub(/<pre>/, '<pre class="term">')
+      end
+    end
+
     def lesson_path n
       path = "lessons/%02d.yaml" % n
       path = nil unless File.file? path
@@ -46,7 +54,10 @@ class RailsBridge < Sinatra::Base
     lessons = Dir["lessons/*.yaml"].sort.map { |f| File.basename f, ".yaml" }
     lessons.map! { |n| load_lesson n.to_i(10) }
 
-    erb :toc, :locals => { :lessons => lessons, :subtitle => "Table of Contents" }
+    erb :toc, :locals => {
+      :lessons => lessons,
+      :subtitle => "Table of Contents"
+    }
   end
 
   get '/:id' do
@@ -54,7 +65,7 @@ class RailsBridge < Sinatra::Base
     lesson = load_lesson n
     lesson["subtitle"] = "Lesson #{n}"
 
-    erb(:goal, :locals => lesson).gsub(/<pre>/, '<pre class="term">')
+    page lesson
   end
 
   get '/' do
