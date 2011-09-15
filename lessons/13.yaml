@@ -1,9 +1,16 @@
 --- 
+goal_title: Hooking up votes and topics
+goal: |
+  
+  Build the relationship between votes and topics.
+
+  TODO: rewrite
+
 steps: |
   
-  * Edit app/models/topic.rb so that it looks like this:
+  Edit app/models/topic.rb so that it looks like this:
   
-  <pre>
+  <pre class="code">
   class Topic < ActiveRecord::Base
     has_many :votes
   end
@@ -11,26 +18,25 @@ steps: |
   
   TODO: add cascading deletes?
   
-  * Edit app/models/vote.rb so that it looks like this:
+  Edit app/models/vote.rb so that it looks like this:
   
-  <pre>
+  <pre class="code">
   class Vote < ActiveRecord::Base
     belongs_to :topic
   end
   </pre>
 
-goal: |
-  
-  
-  * Build the relationship between votes and topics
-
-goal_title: Hooking up votes and topics
 explanation: |
   
-  * has_many and belongs_to:
-  ** In rails, relationships between models are called associations
-  ** Associations (usually) come in pairs
-  ** A topic will have many votes so we put 'has_many :votes' in the topic model.
-  *** When you ask a topic for its votes, you get an array of votes for that topic.
-  ** A vote is for a particular topic, so we put 'belongs_to :topic' in the vote model.
-  *** When you ask a vote for its topic, you get the topic for that vote.
+  `has_many` and `belongs_to`:
+
+  * In rails, relationships between models are called associations.
+  * Associations (usually) come in pairs.
+  * A topic will have many votes so we put `has_many :votes` in the
+    topic model.
+    * When you ask a topic for its votes, you get an array of votes
+      for that topic.
+  * A vote is for a particular topic, so we put `belongs_to :topic`
+    in the vote model.
+    * When you ask a vote for its topic, you get the topic for that
+      vote.
