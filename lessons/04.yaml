@@ -1,0 +1,66 @@
+--- 
+steps: |
+  
+  * Open up a terminal window and try out the following.
+  
+  <pre>
+   mkdir railsbridge
+   cd railsbridge
+   rails new suggestotron
+   cd suggestotron
+   ls
+  </pre>
+  
+  * If you have _any_ problems, contact a TA immediately.
+
+section_content: |
+  
+  # TODO: screenshot
+
+goal: |
+  
+  
+  Let's get started. By the end of this step, we'll have a
+  brand-spankin'-new (empty) rails app.
+
+goal_title: Creating Your New Application
+explanation: |
+  * 'mkdir' stands for make directory (folder).
+    * We've made a folder called railsbridge
+  * 'cd' stands for change directory.
+    * 'cd railsbridge' makes railsbridge our current directory.
+  * 'rails new' creates a new rails project with the name you give.
+    * In this case we told it to create a new project called suggestotron.
+    * We'll go into detail on what it created shortly.
+  * 'ls' stands for "list (stuff)".
+    * It shows you the contents of the current folder.
+
+  You can see that <code>rails new</code> created a lot directors and
+  files. The ones we want to focus on today are:
+
+  <table border="1" cellspacing="0" cellpadding="3" align="center">
+    <tr>
+    <th> File/Folder
+    </th><th> Purpose
+    </th></tr>
+    <tr>
+    <td> app/
+    </td><td> Contains the controllers, models, and views for your application.  You will do most of your work here.
+    </td></tr>
+    <tr>
+    <td> config/
+    </td><td> Configure your application’s runtime rules, routes, database, and more.
+    </td></tr>
+    <tr>
+    <td> db/
+    </td><td> Shows your current database schema, as well as the database migrations.
+    </td></tr>
+    <tr>
+    <td> public/
+    </td><td> The only folder seen to the world as-is.  This is where your images, JavaScript,  stylesheets (CSS), and other static files go
+    </td></tr>
+  </table>
+
+  There is a lot more that `rails new` created. Probably enough to fill
+  a book, so we're going to ignore them for now.
+section_title: Getting Started

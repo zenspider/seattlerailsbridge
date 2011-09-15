@@ -1,0 +1,66 @@
+--- 
+section_title: Introduction to Ruby
+section_content: ""
+goal_title: Programming 101 & IRB
+goal: |
+  
+  By the end of this section you will:
+  
+  * be able to start up irb
+  * do simple calculations in ruby
+  * use and understand variables
+  * use and understand collections
+  * use loops
+
+steps: |
+  
+  * open up a terminal window and try the following:
+  
+  <pre>
+  irb
+  
+  3 + 3
+  7 * 6
+  
+  my_variable = 5
+  
+  my_variable + 2
+  my_variable * 3
+  
+  puts my_variable
+  
+  fruits = ["kiwi", "strawberry", "plum"]
+  
+  fruits + ["orange"]
+  fruits - ["kiwi"]
+  
+  fruits.each do |f|
+    puts f
+  end
+  
+  if my_variable > 1 then
+    puts "YAY!"
+  end
+  </pre>
+
+explanation: |
+  
+  * irb
+    * Starts up the **I**nteractive **R**u**b**y Shell an environment where you can try bits of ruby code and they'll be run automatically.
+  * `3 + 3` and `7 * 6`
+    * Ruby can do simple math automatically.  `*` is used for multiplication and `/` for division.
+  * `my_variable = 5`
+    * variables are words that hold information.  Here we're holding a 5 with the words my_variable
+  * `my_variable + 2` and `my_variable * 3`
+    * Ruby remembers that we are holding a `5` with the words `my_variable` and can use that `5` do to math
+  * `puts my_variable`
+    * puts prints the value of what comes after it.  In this case it should print 5 since `my_variable` is holding a `5`
+  * `fruits = ["kiwi", "strawberry", "plum"]`
+    * Variables can also hold more than one value.  Here were using the variable fruits to hold a collection of fruit names.  This type of collection is called an array.
+  *  `fruits + ["orange"]` and `fruits - ["kiwi"]`
+    * \+ and - are called operators.  We can use them with the array of fruits just like we can use them with numbers.
+  * `fruits.each do |f|`
+    * This code goes through the fruits array item by item and runs the code between do and end for each item.  These lines should print a list of the fruits.
+  * `if my_variable > 1 then puts foo end`
+    * This prints "foo" if the value stored in `my_variable` is greater than 1.  Since the code only runs when certain conditions are met if is called a conditional.
+

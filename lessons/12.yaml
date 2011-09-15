@@ -1,31 +1,28 @@
 --- 
 steps: |
   
-  * In your terminal, try:
+  * In a terminal window type the following
   
   <pre>
-  git status
-  git add .
-  git commit -m "Added all the things"
-  git status
+  rails generate resource vote topic_id:integer
+  rake db:migrate
   </pre>
 
-section_content: 
+section_content: |
+  
+  TODO diagram
+
 goal: |
   
   
-  The previous step didn't do anything with our application. It is time
-  to add them to the repo now.
+  * Create another database table to track votes
 
-goal_title: Add the project to the git repo
+goal_title: Creating a model for votes
 explanation: |
   
-  * "git status" tells you everything git sees as modified, new, or missing.
-  ** The first time you run this, you should see a ton of stuff.
-  ** The second time you run this, you shouldn't see much of anything.
-  * "git add" tells git that you want to add the current directory and everything under it to the repo.
-  * "git commit" tells git to actually _do_ all things you've said you wanted to do.
-  ** This is done in two steps so you can group multiple changes together.
-  ** '-m "Added all the things"' is just a shortcut to say what your commit message is. You can skip that part and git will bring up an editor to fill out a more detailed message.
+  * Just like before, we're creating a new model named "vote"
+  * The only thing really different is the integer we added called topic_id.
+  ** topic_id is the data we need to draw the line between votes and topics.
+  * We didn't generate a full scaffold this time because we aren't going to do the full CRUD for votes, they're just going to be considered part of topics as-is.
 
-section_title: 
+section_title: Voting on Topics

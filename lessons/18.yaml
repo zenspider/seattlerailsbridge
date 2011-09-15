@@ -1,26 +1,47 @@
 --- 
 steps: |
   
-  In your terminal, try:  ('''note:''' there is a period after the word add in the first line)
+  * Let's start by removing the description
+  * Open app/views/topics/index.html.erb
+  
+  * Delete the line that looks like this:
   
   <pre>
-  git add .
-  git commit -m "Added topics"
-  git push heroku master
-  heroku rake db:migrate
+  <td><%= topic.description %></td>
+  </pre>
+  
+  * Also delete the line that looks like this:
+  
+  <pre>
+  <th>Description</th>
+  </pre>
+  
+  * If you save and try to load it in the browser you should see that the description no longer appears
+  * Now to make the title a link
+  * In app/views/topics/index.html.erb again replace this line:
+  
+  <pre>
+  <td><%= topic.title %></td>
+  </pre>
+  
+  with this
+  
+  <pre>
+  <td><%= link_to topic.title, topic %></td>
   </pre>
 
 section_content: 
 goal: |
   
   
-  We just added a whole new feature. Let's push it to heroku so our
-  friends can play with it.
+  Our customer has requested two changes for our site:
+  
+  * Don't show the description on the list page
+  * Make the title a link and when its clicked show the description
 
-goal_title: Commit and push to heroku
+goal_title: Make the topic title a link
 explanation: |
   
-  * We've done the first three steps before, so we won't go over that again...
-  * `heroku rake` executes a rake task on your server, in this case, `db:migrate`, just like you did locally.
+  * TODO
 
 section_title: 

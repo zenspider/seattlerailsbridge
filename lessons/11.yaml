@@ -1,26 +1,26 @@
 --- 
 steps: |
   
-  * In your terminal, try:
+  In your terminal, try:  ('''note:''' there is a period after the word add in the first line)
   
   <pre>
-    git init .
+  git add .
+  git commit -m "Added topics"
+  git push heroku master
+  heroku rake db:migrate
   </pre>
 
 section_content: 
 goal: |
   
   
-  In order to publish our application, we need to add our application
-  and any changes we make over time to a "revision control system". It
-  our case we're going to use git because it is (relatively) easy and it
-  is what our app server, heroku, uses to deal with all changes.
+  We just added a whole new feature. Let's push it to heroku so our
+  friends can play with it.
 
-goal_title: Create a new git repo
+goal_title: Commit and push to heroku
 explanation: |
   
-  It doesn't look like anything really happened, but 'git init'
-  initialized its repository (repo) in a hidden directory called ".git".
-  You can see this by typing `ls -a` (list all files).
+  * We've done the first three steps before, so we won't go over that again...
+  * `heroku rake` executes a rake task on your server, in this case, `db:migrate`, just like you did locally.
 
 section_title: 

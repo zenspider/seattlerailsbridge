@@ -1,82 +1,26 @@
 --- 
 steps: |
   
-  * Open up a terminal window to the suggestotron folder (or use one you already have setup)
-  * Type the following:
+  In your handy-dandy terminal, try:
   
   <pre>
-  rails generate scaffold topic title:string description:text
-  rake db:migrate
-  rails server
+  % git add .
+  % git commit -m "Added votes"
+  % git push heroku master
+  % heroku rake db:migrate
   </pre>
-  
-  
-  * TODO: have them look at the generated files
 
-section_content: ""
+section_content: 
 goal: |
   
-  TODO: diagram of topics model
   
-  
-  The suggestotron has a list of topics that people can vote on. We'll
-  store our topics in the database. In this step you'll do the
-  following:
-  
-  * Create a database table for topics with a title and a description
-  
-  
-  In this step we'll learn a bit about MVC (Model-View-Controller) architecture.
-  By the end of this step you should understand the following concepts:
-  
-  * A record
-  * Model
-  * View
-  * Controller
+  We just made some awesome changes. Let's push them so our friends can
+  play with it.
 
-goal_title: Creating a migration
+goal_title: Commit and push to heroku
 explanation: |
   
-  <code>
-  rails generate scaffold topic title:string description:text
-  </code>
-  
-  * <code>generate scaffold</code> tells rails to create everything necessary to get up and running with topics
-  * <code>topic</code> tells rails the name of the new model
-  * <code>title:string</code> says that topics have a title, which is a string.
-  * <code>description:text</code> says that topics have a description which is a "text". We're befuddled by the difference too.
-  * <code>rake db:migrate</code> tells rails to update the database to include a table for our new model
-  
-  # TODO: no... we need to show all the files created and say what they mean
-  
-  ===== Explaining MVC and Records =====
-  
-  [[File:Mvc.jpg]]
-  
-  TODO: fix fuzzy ugly diagram
-  
-  
-  Rails implements a very specific notion of the
-  '''Model-View-Controller''' pattern, which guides how you build a web
-  application.
-  
-  '''Model'''
-  
-  * represents what is in the database
-  * ActiveRecord, ActiveModel
-  * TODO: clarify
-  
-  '''View'''
-  
-  * the model rendered as HTML
-  * ActionView, erb
-  * TODO: clarify
-  
-  '''Controller'''
-  
-  * receives HTTP actions (GET, POST, PUT, DELETE)
-  * decides what to do, such as rendering a view
-  * ActionController
-  * TODO: clarify
+  Again with the pushing and the remote migration... By this time it
+  should be fairly old hat.
 
-section_title: Topics
+section_title: 

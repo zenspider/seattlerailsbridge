@@ -1,66 +1,82 @@
 --- 
 steps: |
   
-  * Open up a terminal window and try out the following.
+  * Open up a terminal window to the suggestotron folder (or use one you already have setup)
+  * Type the following:
   
   <pre>
-   mkdir railsbridge
-   cd railsbridge
-   rails new suggestotron
-   cd suggestotron
-   ls
+  rails generate scaffold topic title:string description:text
+  rake db:migrate
+  rails server
   </pre>
   
-  * If you have _any_ problems, contact a TA immediately.
-
-section_content: |
   
-  # TODO: screenshot
+  * TODO: have them look at the generated files
 
+section_content: ""
 goal: |
   
+  TODO: diagram of topics model
   
-  Let's get started. By the end of this step, we'll have a
-  brand-spankin'-new (empty) rails app.
+  
+  The suggestotron has a list of topics that people can vote on. We'll
+  store our topics in the database. In this step you'll do the
+  following:
+  
+  * Create a database table for topics with a title and a description
+  
+  
+  In this step we'll learn a bit about MVC (Model-View-Controller) architecture.
+  By the end of this step you should understand the following concepts:
+  
+  * A record
+  * Model
+  * View
+  * Controller
 
-goal_title: Creating Your New Application
+goal_title: Creating a migration
 explanation: |
-  * 'mkdir' stands for make directory (folder).
-    * We've made a folder called railsbridge
-  * 'cd' stands for change directory.
-    * 'cd railsbridge' makes railsbridge our current directory.
-  * 'rails new' creates a new rails project with the name you give.
-    * In this case we told it to create a new project called suggestotron.
-    * We'll go into detail on what it created shortly.
-  * 'ls' stands for "list (stuff)".
-    * It shows you the contents of the current folder.
+  
+  <code>
+  rails generate scaffold topic title:string description:text
+  </code>
+  
+  * <code>generate scaffold</code> tells rails to create everything necessary to get up and running with topics
+  * <code>topic</code> tells rails the name of the new model
+  * <code>title:string</code> says that topics have a title, which is a string.
+  * <code>description:text</code> says that topics have a description which is a "text". We're befuddled by the difference too.
+  * <code>rake db:migrate</code> tells rails to update the database to include a table for our new model
+  
+  # TODO: no... we need to show all the files created and say what they mean
+  
+  ===== Explaining MVC and Records =====
+  
+  [[File:Mvc.jpg]]
+  
+  TODO: fix fuzzy ugly diagram
+  
+  
+  Rails implements a very specific notion of the
+  '''Model-View-Controller''' pattern, which guides how you build a web
+  application.
+  
+  '''Model'''
+  
+  * represents what is in the database
+  * ActiveRecord, ActiveModel
+  * TODO: clarify
+  
+  '''View'''
+  
+  * the model rendered as HTML
+  * ActionView, erb
+  * TODO: clarify
+  
+  '''Controller'''
+  
+  * receives HTTP actions (GET, POST, PUT, DELETE)
+  * decides what to do, such as rendering a view
+  * ActionController
+  * TODO: clarify
 
-  You can see that <code>rails new</code> created a lot directors and
-  files. The ones we want to focus on today are:
-
-  <table border="1" cellspacing="0" cellpadding="3" align="center">
-    <tr>
-    <th> File/Folder
-    </th><th> Purpose
-    </th></tr>
-    <tr>
-    <td> app/
-    </td><td> Contains the controllers, models, and views for your application.  You will do most of your work here.
-    </td></tr>
-    <tr>
-    <td> config/
-    </td><td> Configure your application’s runtime rules, routes, database, and more.
-    </td></tr>
-    <tr>
-    <td> db/
-    </td><td> Shows your current database schema, as well as the database migrations.
-    </td></tr>
-    <tr>
-    <td> public/
-    </td><td> The only folder seen to the world as-is.  This is where your images, JavaScript,  stylesheets (CSS), and other static files go
-    </td></tr>
-  </table>
-
-  There is a lot more that `rails new` created. Probably enough to fill
-  a book, so we're going to ignore them for now.
-section_title: Getting Started
+section_title: Topics
