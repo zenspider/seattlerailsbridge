@@ -1,23 +1,22 @@
 --- 
-steps: |
-  
-  In your terminal, try:  ('''note:''' there is a period after the word add in the first line)
-  
-  <pre>
-  git add .
-  git commit -m "Added topics"
-  git push heroku master
-  heroku rake db:migrate
-  </pre>
-
+goal_title: Commit and push to heroku
 goal: |
-  
   
   We just added a whole new feature. Let's push it to heroku so our
   friends can play with it.
 
-goal_title: Commit and push to heroku
+steps: |
+  
+  In your terminal, try: (**note:** there is a period after the word
+  add in the first line)
+  
+      git add .
+      git commit -m "Added topics"
+      git push heroku master
+      heroku rake db:migrate
+
 explanation: |
   
   * We've done the first three steps before, so we won't go over that again...
-  * `heroku rake` executes a rake task on your server, in this case, `db:migrate`, just like you did locally.
+  * `heroku rake` executes a rake task on your server, in this case,
+    `db:migrate`, just like you did locally.
