@@ -18,7 +18,7 @@ task :default => :push
 
 task :push do
   # heroku apps:create seattlerailsbridge
-  system "git pull --rebase heroku"
+  system "git pull --rebase heroku master"
   system "git push heroku master"
 end
 
