@@ -1,18 +1,70 @@
 --- 
-steps: 
-section_content: ""
-goal: |
+section_title: Meta
+content: |
   
+  ### Goal
+
   To teach you Ruby on Rails we are setting up a business case for an online voting system. We have requirements that our system should allow users to
+
   * register and login
   * view the topics sorted by number of votes
   * vote on topics
   * create, edit, and destroy topics
+
   Also, we have been told the UI should look like this from our business users:
   [[File:Example.jpg]]
   
   Of these requirements, our goal for today is to have a working app online that allows users to manage topics and vote on them. If time allows we can discuss the registration, login, and UI designing aspects of the project.
 
-goal_title: Goal
-explanation: 
-section_title: Meta
+  ### Meta-Goal
+
+  When you have completed today's goal of getting the basic application online you should understand:
+
+  * Basic Ruby syntax
+  * How to test your Ruby code (irb)
+  * How to go from requirements to a new working Rails application
+  * How to get your application online
+  * The basic tools a RoR developer uses (source control, editor, console, local server)
+
+  ### Schedule
+
+  * 1-ish hour of ruby
+  * 4-ish hours of rails, broken up in 1-ish hour steps
+  
+  This is just a rough guideline, not a mandate. Some steps you'll go
+  over and some you'll go under. It'll all work out by the end of the
+  day... unless I really screwed something up. :D
+
+  ### Format
+
+  Each lesson will look like this:
+  
+  <div style="border: 1px solid black; margin: 2em; padding: 1em;">
+  <h2>Section Title</h2>
+  <div class="top-goal">
+  section desc
+  <h3>Step Title</h3>
+  <div class="goal">
+  <h4>Goal:</h4>
+  <p>Description of the current step.
+  <p>Red because big goals are scary.
+  </div> <!-- goal -->
+  <div class="steps">
+  <h4>Steps:</h4>
+  <pre class="term">
+  % steps to take.
+  </pre>
+  <pre class="code">
+  def code_to_write
+    1 + 1
+  end
+  </pre>
+  <p>Yellow because we've gotten it done, but we have no clue what's going on.
+  </div> <!-- steps -->
+  <div class="what">
+  <h4>What Just Happened?</h4>
+  <p>details of what the steps actually did... spell out the cause and effect.
+  <p>Green because we can tie everything together now.
+  </div> <!-- what -->
+  </div> <!-- top-goal -->
+  </div>
