@@ -1,4 +1,5 @@
 div.top-goal { border: 1px solid black; padding: 1em; margin-bottom: 1em }
+div.content { background: #ccf; border: 1px solid black; padding: 1em; margin: 1em }
 div.goal  { background: #fcc; padding: 1em; }
 div.steps { background: #ffc; padding: 1em; }
 div.what   { background: #cfc; padding: 1em; }
