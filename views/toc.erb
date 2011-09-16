@@ -7,6 +7,8 @@
     <li><a href="/<%= i+1 %>">Section: <%= lesson["section_title"] %></a>
     <ol>
   <% end %>
+  <% if lesson["goal_title"] then %> 
     <li><a href="/<%= i+1 %>"><%= lesson["goal_title"] %></a>
+  <% end %>
 <% end %>
 </ol>
