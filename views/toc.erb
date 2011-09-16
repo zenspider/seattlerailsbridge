@@ -4,7 +4,7 @@
 <% lessons.each_with_index do |lesson, i| %>
   <% if lesson["section_title"] then %>
     </ol>
-    <li><a href="/<%= i+1 %>">Section: <%= lesson["section_title"] %></a>
+    <li><a href="/<%= i+1 %>"><%= lesson["section_title"] %></a>
     <ol>
   <% end %>
   <% if lesson["goal_title"] then %> 
