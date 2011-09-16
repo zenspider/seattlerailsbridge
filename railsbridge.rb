@@ -31,6 +31,7 @@ class RailsBridge < Sinatra::Base
       lesson["n"] = n
       lesson["section_title"] ||= nil
       lesson["section_content"] ||= ""
+      lesson["skip_nav"] ||= false
       lesson
     end
 

@@ -1,4 +1,4 @@
-<%= nav n %>
+<%= nav n unless skip_nav %>
 
 <% if section_title %>
   <h2><%= section_title %></h2>
@@ -39,3 +39,5 @@
 <% end %>
 
 </div> <!-- top-goal -->
+
+<%= nav n unless skip_nav %>
