@@ -1,9 +1,7 @@
 --- 
 section_title: Voting on Topics
 section_content: |
-  
-  TODO diagram
-
+ 
 goal_title: Creating a model for votes
 goal: |
   
@@ -18,6 +16,8 @@ steps: |
 
 explanation: |
   
+  ![topics_table](/img/votes_table.png)
+
   * Just like before, we're creating a new model named "vote"
   * The only thing really different is the integer we added called topic_id.
     * topic_id is the data we need to draw the line between votes and topics.
