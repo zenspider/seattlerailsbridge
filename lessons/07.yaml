@@ -22,7 +22,7 @@ explanation: |
   point is that it doesn't get more difficult than this as we add more
   functionality to the application. Your typical process will look like:
   
-  TODO: add my diagram
+  ![workflow](/img/workflow.png)
   
   1. Add/change some functionality.
   2. `git commit -m "msg" files`
