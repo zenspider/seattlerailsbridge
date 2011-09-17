@@ -44,9 +44,8 @@ explanation: |
   
   ![mvc](/img/mvc.png)
   
-  Rails implements a very specific notion of the
-  **Model-View-Controller** pattern, which guides how you build a web
-  application.
+  Rails implements a very specific notion of the **Model View
+  Controller** pattern, which guides how you build a web application.
   
   **Model**
   
