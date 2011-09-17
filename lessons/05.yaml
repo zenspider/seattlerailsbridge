@@ -1,11 +1,9 @@
 --- 
 steps: |
   
-  * In your terminal, try:
+  In your terminal, try:
   
-  <pre>
-    git init .
-  </pre>
+      $ git init .
 
 goal: |
   

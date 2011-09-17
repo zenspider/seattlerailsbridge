@@ -8,8 +8,8 @@ steps: |
 
   Again with the terminal:
 
-      git commit -m "Added topics" .
-      git push heroku master
+      $ git commit -m "Added topics" .
+      $ git push heroku master
 
 explanation: |
   

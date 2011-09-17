@@ -8,9 +8,9 @@ steps: |
   
   In your terminal, try:
   
-      heroku create
-      git push heroku master
-      heroku open
+      $ heroku create
+      $ git push heroku master
+      $ heroku open
 
 explanation: |
   

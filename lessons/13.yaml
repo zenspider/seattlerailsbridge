@@ -2,7 +2,11 @@
 goal_title: Hooking up votes and topics
 goal: |
 
-  In this step, we'll create a relationship between votes and topics.
+  ![topics_and_votes_table](/img/topics_and_votes_table.png)
+
+  Because there is an explicit relationship between a topic and its
+  votes, we need to specify that. In this step, we'll explicitly
+  declare the relationship between votes and topics.
 
 steps: |
   

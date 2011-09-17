@@ -6,7 +6,7 @@ content: |
   
   ri is a tool to look up ruby documentation:
   
-      % ri String.split
+      $ ri String.split
       = String.split
 
       (from ruby core)
@@ -28,7 +28,7 @@ content: |
   If running ri doesn't work and you've installed ruby using rvm, try
   running this command first:
 
-      rvm docs generate
+      $ rvm docs generate
   
   ### irb
   
@@ -38,15 +38,18 @@ content: |
   
   Add this to a file called ~/.irbrc:
   
-      class Object
-        def pim inherited = false
-          self.class.public_instance_methods(inherited).sort -
-            Object.public_instance_methods
-        end
-      end
+  <pre class="code">
+  class Object
+    def pim inherited = false
+      self.class.public_instance_methods(inherited).sort -
+        Object.public_instance_methods
+    end
+  end
+  </pre>
   
   Now you can do stuff like:
   
+      $ irb
       >> "blah".pim
       => ["%", "*", "+", "<<", "<=>", "[]", "[]=", "bytes", "bytesize", ...]
   

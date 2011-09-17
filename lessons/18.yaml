@@ -9,29 +9,30 @@ goal: |
 
 steps: |
   
-  * Let's start by removing the description
-  * Open `app/views/topics/index.html.erb`
-  * Delete the line that looks like this:
+  Let's start by removing the description. Open
+  `app/views/topics/index.html.erb` and delete the line that looks
+  like this:
   
   <pre class="code">
   &lt;td>&lt;%= topic.description %>&lt;/td>
   </pre>
   
-  * Also delete the line that looks like this:
+  Also delete the line that looks like this:
   
   <pre class="code">
   &lt;th>Description&lt;/th>
   </pre>
   
-  * If you save and try to load it in the browser you should see that the description no longer appears
-  * Now to make the title a link
-  * In `app/views/topics/index.html.erb` again replace this line:
+  If you save and try to load it in the browser you should see that
+  the description no longer appears. Now make the title a link by
+  editing `app/views/topics/index.html.erb` (again) and replace this
+  line:
   
   <pre class="code">
   &lt;td>&lt;%= topic.title %>&lt;/td>
   </pre>
   
-  with this
+  with this:
   
   <pre class="code">
   &lt;td>&lt;%= link_to topic.title, topic %>&lt;/td>
@@ -42,15 +43,23 @@ explanation: |
   <pre class="code">
   &lt;td><%= topic.description %>&lt;/td>
   </pre>
-  * This line was getting the description using .description and just printing it out
+
+  This line was getting the description using .description and just printing it out
 
   <pre class="code">
   &lt;th>Description&lt;/th>
   </pre>
-  * <th> stands for table header and everything between <th> and </th> was being printed as a table header (bold).  We removed it since we removed the description and it would look funny to have the header and the wrong thing below it.
+
+  `<th>` stands for table header and everything between `<th>` and
+  `</th>` was being printed as a table header (bold). We removed it
+  since we removed the description and it would look funny to have the
+  header and the wrong thing below it.
 
 
   <pre class="code">
   &lt;td><%= link_to topic.title, topic %>&lt;/td>
   </pre>
-  * Here's another use of link_to to create a link on the page.  This link_to creates a link using the text from the topic title and goes to the topic#show page.
+
+  Here's another use of `link_to` to create a link on the page. This
+  `link_to` creates a link using the text from the topic title and goes
+  to the topic#show page.

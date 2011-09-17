@@ -10,10 +10,10 @@ steps: |
   In your terminal, try: (**note:** there is a period after the word
   add in the first line)
   
-      git add .
-      git commit -m "Added topics"
-      git push heroku master
-      heroku rake db:migrate
+      $ git add .
+      $ git commit -m "Added topics"
+      $ git push heroku master
+      $ heroku rake db:migrate
 
 explanation: |
   

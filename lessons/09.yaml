@@ -24,9 +24,9 @@ steps: |
   
   Try the following in your terminal:
   
-      rails generate scaffold topic title:string description:text
-      rake db:migrate
-      rails server
+      $ rails generate scaffold topic title:string description:text
+      $ rake db:migrate
+      $ rails server
   
   If you want, take some time to poke around the files listed in the generate step.
 

@@ -34,7 +34,7 @@ steps: |
   You also need to remove the welcome aboard page for the new route to
   work. Type this in a terminal window:
   
-      git rm public/index.html
+      $ git rm public/index.html
   
   Go back to [http://localhost:3000/](http://localhost:3000/). You
   should be taken to the topics list automatically.
@@ -53,8 +53,10 @@ explanation: |
     possible URLs. To explore the URLs in more detail we can use the
     terminal.
   
-  At the terminal type <pre> rake routes</pre> you should get
-  something that looks like this:
+  At the terminal type `rake routes` you should get something that
+  looks like this:
+
+      $ rake routes
 
            votes GET    /votes(.:format)           {:action=>"index", :controller=>"votes"}
                  POST   /votes(.:format)           {:action=>"create", :controller=>"votes"}
@@ -76,14 +78,18 @@ explanation: |
   
   ##### Exploring Routes (optional)
   
-  Open up your rails console:
-  
-      rails console
   
   Now you can have a look at the paths that are available in your app.
   Let's try looking at one of the topics routes we just generated.
+  Open up your rails console and play:
   
-      app.topics_path
+      $ rails console
+      >> app.topics_path
       => "/topics"
-      app.topics_url
+      >> app.topics_url
       => "http://www.example.com/topics"
+
+  `app` is a special object that represents your entire application.
+  You can ask it about its routes (as we just did), play with its
+  database connections, or make pseudo-web requests against it with
+  `get` or `post` (and lots more).

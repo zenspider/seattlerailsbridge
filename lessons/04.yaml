@@ -15,11 +15,11 @@ steps: |
   
   Open up a terminal window and try out the following.
   
-      mkdir railsbridge
-      cd railsbridge
-      rails new suggestotron
-      cd suggestotron
-      ls
+      $ mkdir railsbridge
+      $ cd railsbridge
+      $ rails new suggestotron
+      $ cd suggestotron
+      $ ls
   
   If you have _any_ problems, contact a TA immediately.
 

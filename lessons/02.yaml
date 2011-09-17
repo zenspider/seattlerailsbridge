@@ -13,34 +13,32 @@ goal: |
 
 steps: |
   
-  * open up a terminal window and try the following:
+  Open up a terminal window and try the following:
   
-  <pre>
-  irb
-  
-  3 + 3
-  7 * 6
-  
-  my_variable = 5
-  
-  my_variable + 2
-  my_variable * 3
-  
-  puts my_variable
-  
-  fruits = ["kiwi", "strawberry", "plum"]
-  
-  fruits + ["orange"]
-  fruits - ["kiwi"]
-  
-  fruits.each do |f|
-    puts f
-  end
-  
-  if my_variable > 1 then
-    puts "YAY!"
-  end
-  </pre>
+      $ irb
+
+      3 + 3
+      7 * 6
+
+      my_variable = 5
+
+      my_variable + 2
+      my_variable * 3
+
+      puts my_variable
+
+      fruits = ["kiwi", "strawberry", "plum"]
+
+      fruits + ["orange"]
+      fruits - ["kiwi"]
+
+      fruits.each do |f|
+        puts f
+      end
+
+      if my_variable > 1 then
+        puts "YAY!"
+      end
 
 explanation: |
   

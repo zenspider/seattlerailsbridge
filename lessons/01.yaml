@@ -53,13 +53,13 @@ content: |
 
   You can verify that you have everything working by trying this out in your terminal:
 
-      % irb
+      $ irb
       >> 1 + 2
       => 3
       >> require "active_support"
       => true
       >> exit
-      %
+      $
 
   If you can do that, you are probably good to go.
 

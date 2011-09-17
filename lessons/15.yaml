@@ -3,10 +3,10 @@ steps: |
   
   In your handy-dandy terminal, try:
   
-      git add .
-      git commit -m "Added votes"
-      git push heroku master
-      heroku rake db:migrate
+      $ git add .
+      $ git commit -m "Added votes"
+      $ git push heroku master
+      $ heroku rake db:migrate
 
 goal: |
   

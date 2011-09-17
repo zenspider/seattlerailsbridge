@@ -1,14 +1,12 @@
 --- 
 steps: |
   
-  * In your terminal, try:
+  In your terminal, try:
   
-  <pre>
-  git status
-  git add .
-  git commit -m "Added all the things"
-  git status
-  </pre>
+      $ git status
+      $ git add .
+      $ git commit -m "Added all the things"
+      $ git status
 
 goal: |
   
@@ -19,10 +17,10 @@ goal: |
 goal_title: Add the project to the git repo
 explanation: |
   
-  * "git status" tells you everything git sees as modified, new, or missing.
-  ** The first time you run this, you should see a ton of stuff.
-  ** The second time you run this, you shouldn't see much of anything.
-  * "git add" tells git that you want to add the current directory and everything under it to the repo.
-  * "git commit" tells git to actually _do_ all things you've said you wanted to do.
-  ** This is done in two steps so you can group multiple changes together.
-  ** '-m "Added all the things"' is just a shortcut to say what your commit message is. You can skip that part and git will bring up an editor to fill out a more detailed message.
+  * `git status` tells you everything git sees as modified, new, or missing.
+    * The first time you run this, you should see a ton of stuff.
+    * The second time you run this, you shouldn't see much of anything.
+  * `git add .` tells git that you want to add the current directory (aka `.`) and everything under it to the repo.
+  * `git commit` tells git to actually _do_ all things you've said you wanted to do.
+    * This is done in two steps so you can group multiple changes together.
+    * `-m "Added all the things"`  is just a shortcut to say what your commit message is. You can skip that part and git will bring up an editor to fill out a more detailed message.

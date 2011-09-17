@@ -1,23 +1,24 @@
 --- 
 section_title: Voting on Topics
 section_content: |
- 
+
 goal_title: Creating a model for votes
 goal: |
   
-  Create another database table to track votes.
+  ![topics_table](/img/votes_table.png)
+
+  Every topic in suggestotron can be voted on. In order to count
+  votes, we need to record votes. We'll add that table now.
 
 steps: |
   
   In a terminal window type the following
   
-      rails generate resource vote topic_id:integer
-      rake db:migrate
+      $ rails generate resource vote topic_id:integer
+      $ rake db:migrate
 
 explanation: |
   
-  ![topics_table](/img/votes_table.png)
-
   * Just like before, we're creating a new model named "vote"
   * The only thing really different is the integer we added called topic_id.
     * topic_id is the data we need to draw the line between votes and topics.

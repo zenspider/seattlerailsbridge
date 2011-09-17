@@ -8,8 +8,8 @@ steps: |
   
   In your terminal, try this:
   
-      bundle
-      rails server
+      $ bundle
+      $ rails server
   
   Then point your web browser to [http://localhost:3000](http://localhost:3000).
   
