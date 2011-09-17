@@ -8,7 +8,7 @@ steps: |
 
   Again with the terminal:
 
-      $ git commit -m "Added topics" .
+      $ git commit -m "Made stuff look prettier" .
       $ git push heroku master
 
 explanation: |
