@@ -74,8 +74,6 @@ explanation: |
   
   This shows all the URLs your application responds to. The code that starts with colons are variables so :id means the id number of the record. The code in parenthesis is optional.
   
-  TODO: diagram the routes
-  
   ##### Exploring Routes (optional)
   
   Open up your rails console:
