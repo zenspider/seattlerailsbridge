@@ -1,10 +1,8 @@
 --- 
 goal_title: Allow people to vote
 goal: |
-  
-  Add a button to vote on the topic list page
 
-  TODO: fix me
+  Now we're going to add a button people can click to cast a vote.
 
 steps: |
   
