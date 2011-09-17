@@ -14,8 +14,6 @@ steps: |
   end
   </pre>
   
-  TODO: add cascading deletes?
-  
   Edit app/models/vote.rb so that it looks like this:
   
   <pre class="code">
