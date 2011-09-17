@@ -45,23 +45,26 @@ explanation: |
   ![mvc](/img/mvc.png)
   
   Rails implements a very specific notion of the **Model View
-  Controller** pattern, which guides how you build a web application.
+  Controller** pattern, which guides how you structure your web applications.
   
   **Model**
-  
-  * represents what is in the database
-  * ActiveRecord, ActiveModel
-  * TODO: clarify
+
+  * saves data to the database
+  * accesses data from the database 
+  * bridge between the database and objects
   
   **View**
   
-  * the model rendered as HTML
-  * ActionView, erb
-  * TODO: clarify
+  * display the data for human (or machine) consumption
+  * webpages are views 
   
   **Controller**
   
-  * receives HTTP actions (GET, POST, PUT, DELETE)
-  * decides what to do, such as rendering a view
-  * ActionController
-  * TODO: clarify
+  * acts as the glue between the models and the views
+  * combines data from multple models
+  * summarizes and filters data
+
+  In MVC, models, views, and controllers have very specific jobs.  Separating 
+  responsibilities like this make it easy to maintain and extend rails 
+  applications.  When responsibilities become muddied it gets much harder to 
+  debug issues and add new functionality.
