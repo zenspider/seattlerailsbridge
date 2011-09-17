@@ -28,7 +28,7 @@ steps: |
       rake db:migrate
       rails server
   
-  TODO: have them look at the generated files
+  If you want, take some time to poke around the files listed in the generate step.
 
 explanation: |
   
@@ -40,13 +40,9 @@ explanation: |
   * `description:text` says that topics have a description which is a "text". (We're befuddled by the difference too).
   * `rake db:migrate` tells rails to update the database to include a table for our new model
   
-  TODO: no... we need to show all the files created and say what they mean
-  
   ##### Explaining MVC and Records
   
-  [[File:Mvc.jpg]]
-  
-  TODO: fix fuzzy ugly diagram
+  ![mvc](/img/mvc.png)
   
   Rails implements a very specific notion of the
   **Model-View-Controller** pattern, which guides how you build a web
