@@ -2,10 +2,11 @@
 section_title: Getting Started
 section_content: |
   
-  TODO: screenshot
+  ![start page](/img/Start_page.png)
 
 goal_title: Creating Your New Application
 goal: |
+
   
   Let's get started! By the end of this step, we'll have a
   brand-spankin'-new (empty) rails app.
