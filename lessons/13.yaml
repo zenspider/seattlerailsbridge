@@ -1,10 +1,8 @@
 --- 
 goal_title: Hooking up votes and topics
 goal: |
-  
-  Build the relationship between votes and topics.
 
-  TODO: rewrite
+  In this step, we'll create a relationship between votes and topics.
 
 steps: |
   
