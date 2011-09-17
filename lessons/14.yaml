@@ -25,11 +25,13 @@ steps: |
   Add the following method to `Vote` in `app/controllers/votes_controller.rb`:
   
   <pre class="code">
-  def create
-    topic = Topic.find(params[:topic_id])
-    vote = topic.votes.build
-    vote.save!
-    redirect_to(topics_path)
+  class VotesControllerTest < ActionController::TestCase
+    def create
+      topic = Topic.find(params[:topic_id])
+      vote = topic.votes.build
+      vote.save!
+      redirect_to(topics_path)
+    end
   end
   </pre>
   
