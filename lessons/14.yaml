@@ -14,7 +14,7 @@ steps: |
       &lt;td>&lt;%= topic.title %>&lt;/td>
       &lt;td>&lt;%= topic.description %>&lt;/td>
       &lt;td>&lt;%= pluralize(topic.votes.length, "vote") %>&lt;/td>
-      &lt;td>&lt;%= link_to '+1', votes_path(:topic_id => topic.id), :method => :post %>&lt;/td>
+      &lt;td>&lt;%= button_to '+1', votes_path(:topic_id => topic.id), :method => :post %>&lt;/td>
       &lt;td>&lt;%= link_to 'Show', topic %>&lt;/td>
       &lt;td>&lt;%= link_to 'Edit', edit_topic_path(topic) %>&lt;/td>
       &lt;td>&lt;%= link_to 'Destroy', topic, :confirm => 'Are you sure?', :method => :delete %>&lt;/td>
@@ -43,10 +43,10 @@ explanation: |
   First we added this line to `app/views/topics/index.html.erb`
   
   <pre class="code">
-  &lt;td>&lt;%= link_to '+1', votes_path(:topic_id => topic.id), :method => :post %>&lt;/td>
+  &lt;td>&lt;%= button_to '+1', votes_path(:topic_id => topic.id), :method => :post %>&lt;/td>
   </pre>
   
-  * `link_to '+1'` creates an html link with the text '+1'
+  * `button_to '+1'` creates an html button with the value '+1'
   * `votes_path(:topic_id => topic.id)` creates the right url for the action we want to invoke. In this case, we want to create a vote for the current topic.
     * `votes_path(:topic_id => 42)` would output `/votes?topic_id=42`
   * `:method => :post` ensures we do the create action of CRUD, not the read action.
