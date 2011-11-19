@@ -25,7 +25,7 @@ steps: |
   Add the following method to `Vote` in `app/controllers/votes_controller.rb`:
   
   <pre class="code">
-  class VotesControllerTest < ActionController::TestCase
+  class VotesController < ApplicationController
     def create
       topic = Topic.find(params[:topic_id])
       vote = topic.votes.build
